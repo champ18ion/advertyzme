@@ -1,10 +1,4 @@
-:root {
-  --black: #150605;
-  --red: #EA453C;
-  --pink: #F47B6E;
-  --light-blue: #EFFBFE;
-  --blue: #ACE6EC;
-}
+
 
 html, body {
   font-family: 'Oswald', sans-serif;
@@ -15,56 +9,13 @@ html, body {
 main.photos {
   padding: 10px;
   display: grid;
-  grid-gap: 2px;
+  grid-gap: 6px;
   grid-auto-rows: 100px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-flow: dense;
 }
 
-main.cart-page {
-  padding: 10px;
-}
 
-.cart-page > h1 {
-  text-align: center;
-}
-
-.cart-page .total-cost {
-  text-align: right;
-  font-size: 1.3em;
-}
-
-.cart-page div.order-button {
-  display: flex;
-  justify-content: center;
-}
-
-div.order-button > button {
-  border-color: var(--black);
-  cursor: pointer;
-  padding: 15px;
-  transition: all .2s ease-in-out;
-}
-
-div.order-button > button:focus {
-  outline: none;
-}
-
-div.order-button > button:disabled {
-  border-color: lightgray;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.cart-item img {
-  margin-right: auto;
-  margin-left: 10px;   
-}
 
 img.image-grid {
   width: 100%;
@@ -76,36 +27,11 @@ img.image-grid {
   position: relative;
 }
 
-.favorite {
-  color: var(--red);
-  font-size: 1.2rem;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  cursor: pointer;
-}
 
-.ri-heart-fill {
-  opacity: .7;
-}
-
-.ri-delete-bin-line, .ri-delete-bin-fill {
-  font-size: 1.3em;
-  cursor: pointer;
-}
-
-.cart {
-  color: var(--blue);
-  font-size: 1.2rem;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-}
 
 .wide {
   grid-column: span 6;
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
 .tall {
@@ -119,12 +45,20 @@ img.image-grid {
 }
 
 .header {
+  position: fixed; /* Fixed position */
+  top: 0; /* Position at the top of the viewport */
+  left: 0;
+  right: 0; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color:rgb(217, 185, 248); 
-  color: #fff; /* Set your text color */
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: #fff; 
+  z-index: 999; 
+}
+.content{
+  margin-top: 100px;
 }
 
 .logo img {
@@ -133,32 +67,32 @@ img.image-grid {
 }
 
 .site-name {
-  flex-grow: 1; /* Allow the site name to grow and occupy available space */
-  text-align: center; /* Center-align text */
+  flex-grow: 1; 
+  text-align: center;
 }
 
 .site-name h1 {
-  font-size: 1.5rem; /* Set the font size for the site name */
+  font-size: 1.5rem;
 }
 
-/* Add a media query for responsiveness */
+
 @media (max-width: 768px) {
   .logo {
-    order: 1; /* Move the logo to the top on small screens */
-    text-align: center; /* Center-align the logo */
+    order: 1; 
+    text-align: center; 
   }
 
   .site-name {
-    order: 2; /* Move the site name below the logo on small screens */
+    order: 2; 
   }
 }
-/* Add these styles for centering and styling the "Load More" button */
+
 .load-more-button {
   display: block;
-  margin: 20px auto; /* Center the button horizontally */
+  margin: 20px auto; 
   padding: 10px 20px;
-  background-color: #007bff; /* Blue background color */
-  color: white; /* Text color */
+  background-color: #007bff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -167,38 +101,32 @@ img.image-grid {
 }
 
 .load-more-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
+}
+.banner {
+  background: linear-gradient(to right, #ff6b6b, #ffa07a); /* Gradient background */
+  color: #fff; /* Text color */
+  text-align: center;
+  margin: 10PX;
+  padding: 50px;
 }
 
-/* Add this CSS to your styles.css file or equivalent */
-
-.image-placeholder {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite linear;
+/* Style the banner heading */
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .banner {
+      padding: 30px;
   }
-  100% {
-    background-position: -200% 0;
+
+  .banner h1 {
+      font-size: 1.8rem;
   }
 }
-
-
-a {
-  text-decoration: none;
-}
-
-a:visited { color: var(--light-blue); }
-a:hover { color: var(--light-blue); }
-a:active { color: var(--light-blue); }
-
 @media (max-width: 768px) {
   main.photos {
    display: flex;

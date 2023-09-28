@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './style.css';
-import ImageGallery from './ImageGallery.jsx';
-import Header from './Header';
+import React, { useState } from "react";
+import "./style.css";
+import ImageGallery from "./ImageGallery.jsx";
+import Header from "./Header";
 
 export default function App() {
   const [page, setPage] = useState(1);
@@ -22,8 +22,15 @@ export default function App() {
   return (
     <div>
       <Header />
-      <ImageGallery page={page} perPage={perPage} />
-      <LoadMoreButton onClick={handleLoadMore} />
+      {/* <img src={banner} alt='banner' className='banner'/> */}
+      <div className="content">
+        <div class="banner">
+          <h1>Welcome to Champ18ion's Website</h1>
+          <p>Made specially for aDMe {`:)`}</p>
+        </div>
+        <ImageGallery page={page} perPage={perPage} />
+        <LoadMoreButton onClick={handleLoadMore} />
+      </div>
     </div>
   );
 }

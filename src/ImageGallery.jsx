@@ -28,7 +28,7 @@ const ImageGallery = ({ page, perPage }) => {
   }, [page, perPage]);
 
   function getClass(i) {
-    // Calculate the effective index within each repeating pattern
+
     const effectiveIndex = i % 5;
 
     if (effectiveIndex === 0) {
