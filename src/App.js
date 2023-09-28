@@ -1,16 +1,14 @@
-// App.jsx
 import React, { useState } from 'react';
 import './style.css';
 import ImageGallery from './ImageGallery.jsx';
 import Header from './Header';
 
-
 export default function App() {
-  const [page, setPage] = useState(1); 
-  const perPage = 50; 
+  const [page, setPage] = useState(1);
+  const perPage = 50;
 
   const handleLoadMore = () => {
-    setPage((prevPage) => prevPage + 1); 
+    setPage((prevPage) => prevPage + 1);
   };
 
   const LoadMoreButton = ({ onClick }) => {
