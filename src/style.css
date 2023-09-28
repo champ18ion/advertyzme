@@ -45,8 +45,8 @@ img.image-grid {
 }
 
 .header {
-  position: fixed; /* Fixed position */
-  top: 0; /* Position at the top of the viewport */
+  position: fixed; 
+  top: 0; 
   left: 0;
   right: 0; 
   display: flex;
@@ -104,20 +104,19 @@ img.image-grid {
   background-color: #0056b3; 
 }
 .banner {
-  background: linear-gradient(to right, #ff6b6b, #ffa07a); /* Gradient background */
-  color: #fff; /* Text color */
+  background: linear-gradient(to right, #ff6b6b, #ffa07a); 
+  color: #fff; 
   text-align: center;
   margin: 10PX;
   padding: 50px;
 }
 
-/* Style the banner heading */
 .banner h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-/* Add responsive styles */
+
 @media (max-width: 768px) {
   .banner {
       padding: 30px;
